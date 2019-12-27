@@ -2,10 +2,6 @@
 
 a = list(map(int, input().split()))
 
-sum_zeroes = 0
+a = [x for x in a if x != 0] + [0] * a.count(0)
 
-for i, n in enumerate(a):
-    if n == 0:
-        sum_zeroes += 1
-        a.remove(0)
-print(a)
+print(' '.join(map(str, a)))
