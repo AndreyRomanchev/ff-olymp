@@ -10,7 +10,7 @@ for i in range(a):
     for j in range(a):
         if i == j:
             gena += A[i][j]
-        elif i + j + 1 == a:
+        if i + j + 1 == a:
             che += A[i][j]
 
 if gena > che:

@@ -4,7 +4,10 @@ n = int(input())
 a = int(input())
 b = int(input())
 
-if a + b < n:
-    print("0")
-else:
-    print(min(a, b) + 1)
+s = 0
+
+for i in range(a + 1):
+    for j in range(b, -1, -1):
+        if i + j == n:
+            s += 1
+print(s)
