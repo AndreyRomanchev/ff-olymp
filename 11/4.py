@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+from sys import setrecursionlimit
+
+setrecursionlimit(10 ** 6)
+
 # a = list(map(int, input().split()))
 m = int(input())
 n = int(input())

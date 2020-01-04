@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 
+from sys import setrecursionlimit
+
+setrecursionlimit(10 ** 6)
+
 # a = list(map(int, input().split()))
-a = int(input())
+n = int(input())
 
 
 def wrongfib(a: int):
@@ -10,4 +14,4 @@ def wrongfib(a: int):
     else:
         return wrongfib(a - 1) + wrongfib(a - 3)
 
-print(wrongfib(a))
+print(wrongfib(n))
