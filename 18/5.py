@@ -1,19 +1,15 @@
 #!/usr/bin/env python3
 
 
-sizes = list(map(int, input().split()))
-sizes.sort(reverse=True)
-feet = list(map(int, input().split()))
-feet.sort()
+sizes = sorted(list(map(int,input().split())))
+feet = sorted(list(map(int,input().split())))
 
 ans = 0
 for i in feet:
-    if i > sizes[0]:
-        break
-    for num, k in enumerate(sizes):
-        if i > k:
+    for k in sizes:
+        if i <= k:
             ans += 1
-            sizes.pop(num-1)
+            sizes.remove(k)
             break
 
 print(ans)
