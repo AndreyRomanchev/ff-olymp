@@ -21,7 +21,6 @@ ans = 0
 
 for i, v in enumerate(n_arr):
     j = upper_bound(n_arr, v + m)
-    print(i, j)
     ans += j - i
 
 print(ans)
